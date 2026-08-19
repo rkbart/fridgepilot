@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+vendor/bundle/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+/tmp/
+log/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sub-repos (tracked separately)
+/backend/
+/frontend/
+
+# Tooling / agent config
+/.agents/
+/.claude/
+/.opencode/
+/.ruby-lsp/
+/.specify/
+/skills-lock.json
+
+# AI-assisted design docs (kept local only)
+/specs/
