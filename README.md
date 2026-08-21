@@ -15,8 +15,9 @@ This repo is the **parent / orchestration** repository. It contains the shared i
 
 - **User accounts** — email/password signup & login with JWT authentication
 - **Pantry** — track items you have on hand (name, quantity, unit, category, expiry)
-- **Recipes** — store and manage your own recipes with ingredients and instructions
-- **Grocery lists** — create lists and manage items with full CRUD (quantity, unit dropdown, status check-off)
+- **Recipes** — store and manage your own recipes with ingredients, instructions, and photos (file upload or URL)
+- **Recipe Discovery** — match pantry ingredients against 300+ recipes from TheMealDB with match percentages (Perfect Match / Almost There / More Needed)
+- **Grocery lists** — create lists and manage items with full CRUD (quantity, unit dropdown, status check-off), plus one-click add missing ingredients from recipes with pre-filled quantity & unit from recipe data
 - **AI assistant** (optional) — suggest recipes from your pantry contents and generate grocery lists from recipes
 - **Settings** — per-user AI provider configuration (NVIDIA NIM)
 
