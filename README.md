@@ -14,7 +14,7 @@ This repo is the **parent / orchestration** repository. It contains the shared i
 ## Features
 
 - **User accounts** — email/password signup & login with JWT authentication
-- **Pantry** — track items you have on hand (name, quantity, unit, category, expiry)
+- **Pantry** — track items you have on hand (name, quantity, unit, category, expiry); duplicate entries are prevented case-insensitively ("Spaghetti" and "spaghetti" can't coexist)
 - **Recipes** — store and manage your own recipes with ingredients, instructions, and photos (file upload or URL)
 - **Recipe Discovery** — match pantry ingredients against 300+ recipes from TheMealDB with match percentages (Perfect Match / Almost There / More Needed)
 - **Grocery lists** — create lists and manage items with full CRUD (quantity, unit dropdown, status check-off), plus one-click add missing ingredients from recipes with pre-filled quantity & unit from recipe data
