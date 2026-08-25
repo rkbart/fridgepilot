@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T00:00:00Z",
+  "title": "Design System: FridgePilot",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Sage Green",
+        "canonical": "#5F7161",
+        "tonalRamp": ["#3A463B", "#4A5A4B", "#5F7161", "#6B8F71", "#8AA48C", "#A8BCAA", "#C6D5C7", "#E4EDE4"]
+      },
+      "primary-light": {
+        "role": "primary",
+        "displayName": "Sage Light",
+        "canonical": "#6B8F71",
+        "tonalRamp": ["#4F7057", "#5F7161", "#6B8F71", "#8AA48C", "#A8BCAA", "#C6D5C7", "#E4EDE4", "#F2F8F2"]
+      },
+      "terracotta": {
+        "role": "secondary",
+        "displayName": "Terracotta",
+        "canonical": "#C4704B",
+        "tonalRamp": ["#8B3D22", "#C4704B", "#D4A373", "#E0B894", "#EBCEB4", "#F5E1D1", "#FAEEE4", "#FDF7F1"]
+      },
+      "terracotta-light": {
+        "role": "secondary",
+        "displayName": "Terracotta Light",
+        "canonical": "#D4A373",
+        "tonalRamp": ["#C4704B", "#D4A373", "#E0B894", "#EBCEB4", "#F5E1D1", "#FAEEE4", "#FDF7F1", "#FEFBF8"]
+      },
+      "honey": {
+        "role": "secondary",
+        "displayName": "Honey",
+        "canonical": "#D4A843",
+        "tonalRamp": ["#8B6E1A", "#D4A843", "#E0BE6A", "#ECD496", "#F4E4BC", "#F9F0DC", "#FCF7EC", "#FEFBF6"]
+      },
+      "linen": {
+        "role": "neutral",
+        "displayName": "Linen",
+        "canonical": "#FAF8F5",
+        "tonalRamp": ["#F5F0EA", "#FAF8F5", "#FDFCFB", "#FEFEFE", "#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"]
+      },
+      "linen-warm": {
+        "role": "neutral",
+        "displayName": "Linen Warm",
+        "canonical": "#F5F5F0",
+        "tonalRamp": ["#E8E4DF", "#F5F5F0", "#FAF8F5", "#FDFCFB", "#FEFEFE", "#FFFFFF", "#FFFFFF", "#FFFFFF"]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#2C2C2C",
+        "tonalRamp": ["#1A1A1A", "#2C2C2C", "#404040", "#585858", "#707070", "#888888", "#A0A0A0", "#B8B8B8"]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#6B6560",
+        "tonalRamp": ["#4A4540", "#6B6560", "#807A75", "#95908B", "#AAA5A0", "#BFBAB5", "#D4D0CC", "#E9E6E3"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Border",
+        "canonical": "#E8E4DF",
+        "tonalRamp": ["#C0BAB3", "#D4D0CC", "#E8E4DF", "#F0ECE7", "#F5F2EF", "#FAF8F5", "#FDFCFB", "#FEFEFE"]
+      },
+      "border-light": {
+        "role": "neutral",
+        "displayName": "Border Light",
+        "canonical": "#F0ECE7",
+        "tonalRamp": ["#D4D0CC", "#E8E4DF", "#F0ECE7", "#F5F2EF", "#FAF8F5", "#FDFCFB", "#FEFEFE", "#FFFFFF"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#E8E4DF", "#F0ECE7", "#F5F2EF", "#FAF8F5", "#FDFCFB", "#FEFEFE", "#FFFFFF", "#FFFFFF"]
+      },
+      "danger": {
+        "role": "danger",
+        "displayName": "Danger",
+        "canonical": "#B83A2A",
+        "tonalRamp": ["#7A2618", "#B83A2A", "#D45A4A", "#E47A6A", "#F0A090", "#F8C4B8", "#FCE0DA", "#FEF0EC"]
+      },
+      "danger-bg": {
+        "role": "danger",
+        "displayName": "Danger Background",
+        "canonical": "#FDF2F0",
+        "tonalRamp": ["#F8C4B8", "#FCE0DA", "#FEF0EC", "#FDF2F0", "#FEF6F4", "#FEFAF9", "#FEFDFD", "#FFFFFF"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Brand name, page titles. Used sparingly for maximum impact."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Main content, descriptions, form labels. Optimized for reading comfort."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Quantities, measurements, technical data. Distinguishes numerical data from prose."
+      }
+    },
+    "shadows": [
+      {
+        "name": "subtle",
+        "value": "0 1px 3px rgba(0,0,0,0.06)",
+        "purpose": "Cards at rest,轻微的抬升感"
+      },
+      {
+        "name": "medium",
+        "value": "0 4px 12px rgba(0,0,0,0.08)",
+        "purpose": "Elevated cards, dropdown menus, modals"
+      },
+      {
+        "name": "large",
+        "value": "0 8px 24px rgba(0,0,0,0.12)",
+        "purpose": "Prominent dialogs, floating elements"
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for state transitions"
+      },
+      {
+        "name": "duration-fast",
+        "value": "0.15s",
+        "purpose": "Quick feedback for hover states and small interactions"
+      },
+      {
+        "name": "duration-normal",
+        "value": "0.2s",
+        "purpose": "Standard transitions for most UI elements"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary action button for main interactions like Save, Add, Create.",
+      "html": "<button class=\"ds-btn-primary\">Save Changes</button>",
+      "css": ".ds-btn-primary { background: #5F7161; color: #FFFFFF; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #5F7161; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.15s ease; } .ds-btn-primary:hover { background: #4A7A2E; border-color: #4A7A2E; } .ds-btn-primary:focus-visible { outline: 2px solid #4A7A2E; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary action button for Cancel, Edit, or less prominent actions.",
+      "html": "<button class=\"ds-btn-secondary\">Cancel</button>",
+      "css": ".ds-btn-secondary { background: #FFFFFF; color: #2C2C2C; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #E8E4DF; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.15s ease; } .ds-btn-secondary:hover { border-color: #5F7161; color: #5F7161; } .ds-btn-secondary:focus-visible { outline: 2px solid #5F7161; outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Destructive action button for Delete, Remove, or permanent actions.",
+      "html": "<button class=\"ds-btn-danger\">Delete</button>",
+      "css": ".ds-btn-danger { background: #FFFFFF; color: #B83A2A; padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #E8E4DF; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.15s ease; } .ds-btn-danger:hover { background: #FDF2F0; border-color: #B83A2A; } .ds-btn-danger:focus-visible { outline: 2px solid #B83A2A; outline-offset: 2px; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Container component for grouping related content with subtle elevation.",
+      "html": "<div class=\"ds-card\"><h3>Card Title</h3><p>Card content goes here.</p></div>",
+      "css": ".ds-card { background: #FFFFFF; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: box-shadow 0.2s ease; } .ds-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Text input field for user data entry with focus and error states.",
+      "html": "<input type=\"text\" class=\"ds-input\" placeholder=\"Enter text...\" />",
+      "css": ".ds-input { background: #FFFFFF; border: 1px solid #E8E4DF; border-radius: 8px; padding: 0.5rem 0.75rem; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.95rem; color: #2C2C2C; transition: border-color 0.15s ease; } .ds-input:focus { outline: none; border-color: #5F7161; box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1); } .ds-input::placeholder { color: #6B6560; } .ds-input.error { border-color: #B83A2A; background: #FDF2F0; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Sidebar navigation link with active and hover states.",
+      "html": "<a href=\"/recipes\" class=\"ds-nav-link\">Recipes</a>",
+      "css": ".ds-nav-link { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.5rem; color: #6B6560; font-weight: 500; font-size: 0.95rem; text-decoration: none; transition: all 0.15s ease; border-left: 3px solid transparent; } .ds-nav-link:hover { color: #2C2C2C; background: #FAF8F5; } .ds-nav-link.active { color: #5F7161; background: rgba(45, 80, 22, 0.06); border-left-color: #5F7161; }"
+    },
+    {
+      "name": "Tag/Chip",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Label component for categories, status indicators, and metadata.",
+      "html": "<span class=\"ds-tag\">Category</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; padding: 0.25rem 0.5rem; background: #F5F0EA; color: #C4704B; border-radius: 8px; font-size: 0.75rem; font-weight: 500; }"
+    },
+    {
+      "name": "Checkbox",
+      "kind": "input",
+      "refersTo": "checkbox",
+      "description": "Binary input for toggling states with custom styling.",
+      "html": "<label class=\"ds-checkbox\"><input type=\"checkbox\" /><span>Option</span></label>",
+      "css": ".ds-checkbox { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.95rem; color: #2C2C2C; } .ds-checkbox input { width: 1rem; height: 1rem; accent-color: #5F7161; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Modern Farmhouse",
+    "overview": "FridgePilot's design is a modern farmhouse: clean lines, honest materials, and functional elegance. Sage green grounds the interface like painted cabinetry; warm terracotta and honey appear as earthenware accents; soft cream backgrounds feel like morning light on plaster walls. The design prioritizes scanability and ease of use for busy cooking moments.\n\nTypography pairs Lora—a serif with quiet warmth and just enough personality—for headings with DM Sans for clean, modern body readability. The combination feels crafted rather than decorated: approachable, durable, calm under daily use.",
+    "keyCharacteristics": [
+      "Warm, natural color palette with organic greens and earthy accents",
+      "Clean, functional layouts optimized for quick scanning",
+      "Subtle depth through soft shadows and layered backgrounds",
+      "Typography that balances character with legibility",
+      "Consistent spacing and border radius for visual harmony"
+    ],
+    "rules": [
+      {
+        "name": "The Green Accent Rule",
+        "body": "The primary green is used on ≤15% of any given screen. Its rarity makes it meaningful—reserved for active states, primary actions, and navigation highlights.",
+        "section": "colors"
+      },
+      {
+        "name": "The Kitchen Label Rule",
+        "body": "Labels use uppercase with increased letter-spacing to mimic the clear, organized labeling found in well-kept pantries and kitchens.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces are flat at rest. Shadows appear only as a response to state (hover, elevation, focus) or to establish visual hierarchy (cards on backgrounds).",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Sage Green sparingly—for active states, primary actions, and navigation highlights only.",
+      "Do maintain consistent spacing using the 8px base unit (0.5rem, 1rem, 1.5rem, 2rem).",
+      "Do use the mono font (JetBrains Mono) for quantities, measurements, and numerical data.",
+      "Do keep cards flat at rest with subtle shadows for elevation hierarchy.",
+      "Do use uppercase labels with letter-spacing for section headers and navigation items."
+    ],
+    "donts": [
+      "Don't use Sage Green for large background areas or decorative elements—it's reserved for interactive accents.",
+      "Don't mix multiple font families in the same context—stick to the display/body/mono hierarchy.",
+      "Don't add shadows to elements that don't need elevation—keep the design clean and flat by default.",
+      "Don't use borders where shadows would be more appropriate—borders are for structure, shadows for depth.",
+      "Don't override the consistent border radius scale—maintain the 8px/12px system for visual harmony."
+    ]
+  }
+}
