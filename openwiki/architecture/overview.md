@@ -1,118 +1,101 @@
 ---
-type: conceptual-guide
-title: Architecture Overview
-description: System overview based on README architecture diagram showing client, API, database, and AI provider interactions.
+type: Architecture Overview
+title: FridgePilot Architecture
+description: High-level system architecture showing the interaction between client, API, database, and optional AI provider.
+tags: [architecture, system-design]
 ---
-
 # FridgePilot Architecture
 
 ## System Overview
 
-FridgePilot follows a client-server architecture with the following components:
+FridgePilot follows a classic three-tier architecture with a single-page application (SPA) frontend, a JSON API backend, and a PostgreSQL database, with optional integration to an AI provider for enhanced features.
 
-```
-┌─────────────┐   HTTPS/JSON   ┌──────────────┐   SQL   ┌─────────────┐
-│  Client (SPA)│ ─────────────▶ │   API (Rails) │ ──────▶ │  PostgreSQL  │
-│  Vite/React  │ ◀───────────── │  Puma/JWT    │ ◀────── │              │
-└─────────────┘   JWT bearer    └──────────────┘         └─────────────┘
-                                     │  HTTP
-                                     ▼
-                              ┌──────────────┐
-                              │  AI provider │
-                              │  (NVIDIA NIM)│
-                              └──────────────┘
+<!-- openwiki: mermaid parse failed and this diagram was converted to a text fence so it does not break rendering. Fix the diagram source and restore the mermaid fence. Parser error: Parse error on line 2: ...graph Client[Client (SPA)] direc Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS' -->
+```text
+flowchart TB
+    subgraph Client[Client (SPA)]
+        direction TB
+        Vite[Vite/React 19] --> Router[React Router]
+        Router --> UI[User Interface]
+    end
+    
+    subgraph API[API (Rails)]
+        direction TB
+        Rails[Ruby on Rails 8 API-only] --> Devise[Devise + devise-jwt]
+        Devise --> JTI[JTI Revocation Strategy]
+        JTI --> Controllers[API Controllers]
+        Controllers --> Models[ActiveRecord Models]
+    end
+    
+    subgraph DB[Database]
+        PostgreSQL[PostgreSQL]
+    end
+    
+    subgraph AI[AI Provider]
+        NVIDIA[NVIDIA NIM]
+    end
+    
+    Client -->|HTTPS/JSON Bearer Token| API
+    API -->|SQL| DB
+    API -->|HTTP| AI
+    AI -->|HTTP| API
 ```
 
-## Component Responsibilities
+## Component Details
 
 ### Client (SPA)
-- **Technology**: React 19 + TypeScript built with Vite
-- **Responsibilities**:
-  - User interface and user experience
-  - State management via React Contexts
-  - Routing with React Router
-  - Communication with API via HTTP/JSON
-  - Local storage for JWT token persistence
-- **Location**: `/frontend/` directory
+- **Technology**: React 19 with TypeScript, built using Vite
+- **Routing**: React Router for client-side navigation
+- **Responsibilities**: 
+  - User interface for pantry management, recipe browsing, and grocery lists
+  - Authentication flow (login/register)
+  - API communication via JSON over HTTPS
+  - State management for UI components
 
 ### API (Rails)
-- **Technology**: Ruby on Rails 8 (API-only), PostgreSQL, Devise + JWT authentication
+- **Technology**: Ruby on Rails 8 (API-only mode)
+- **Authentication**: Devise with `devise-jwt` using JTI (JWT ID) revocation strategy
 - **Responsibilities**:
-  - Authentication and user management
-  - Pantry items CRUD operations
-  - Recipe management and storage
-  - Grocery list management
-  - AI integration for recipe suggestions and grocery list generation
-  - Recipe discovery via TheMealDB integration
-  - Health check endpoints
-- **Location**: `/backend/` directory
+  - RESTful JSON API for all application data
+  - User authentication and authorization
+  - Business logic for pantry, recipes, and grocery lists
+  - Integration with AI provider for optional features
+  - Database interactions via ActiveRecord
 
 ### Database
 - **Technology**: PostgreSQL
 - **Responsibilities**:
-  - Persistent storage for all application data
-  - User accounts and authentication data
-  - Pantry items with expiry tracking
-  - User-created recipes
-  - Grocery lists and items
-  - User settings and preferences
-- **Managed by**: Rails ActiveRecord migrations
+  - Persistent storage for users, pantry items, recipes, grocery lists
+  - JWT blacklist for token revocation (via JTI strategy)
+  - Relationship modeling between entities
 
-### AI Provider (NVIDIA NIM)
-- **Technology**: NVIDIA NIM (optional integration)
+### AI Provider (Optional)
+- **Technology**: NVIDIA NIM (NVIDIA Inference Microservices)
 - **Responsibilities**:
   - Recipe suggestions based on pantry contents
   - Grocery list generation from recipes
-  - Configured via user settings (NVIDIA NIM API key and URL)
-- **Communication**: HTTP API calls from Rails backend
+  - Configurable per-user in settings
 
-## Data Flow and Interaction Patterns
+## Data Flow
 
-### User Authentication Flow
-1. User signs in via `/users/sign_in` endpoint
-2. API returns JWT token in `Authorization` header
-3. Client stores token in localStorage
-4. Subsequent requests include `Authorization: Bearer <token>` header
-5. Token renewal via `/users/token/renew` before expiration
-6. Token revocation on sign-out (JTI strategy)
+1. **User Interaction**: User interacts with the React SPA interface
+2. **API Request**: SPA sends HTTPS requests to Rails API with JWT bearer token
+3. **Authentication**: API validates JWT using Devise/JTI strategy
+4. **Processing**: API executes business logic, queries/modifies database
+5. **AI Integration**: When needed, API makes HTTP calls to AI provider
+6. **Response**: API returns JSON response to SPA
+7. **UI Update**: SPA updates interface based on API response
 
-### Typical User Workflow
-1. User views pantry items (GET `/api/v1/pantry_items`)
-2. User adds items to pantry (POST `/api/v1/pantry_items`)
-3. User discovers recipes based on pantry (GET `/api/v1/discover`)
-4. User saves or creates recipes (POST `/api/v1/recipes`)
-5. User creates grocery lists from recipes or manually
-6. Optional: User invokes AI for recipe suggestions or list generation
+## Deployment Characteristics
 
-### AI Integration Flow
-1. User configures AI provider in settings (NVIDIA NIM credentials)
-2. User requests recipe suggestions from pantry contents
-3. API calls `ai_service` → `recipe_matcher` → TheMealDB client
-4. Or user requests grocery list generation from a recipe
-5. API calls `ai_service` with recipe data to NVIDIA NIM
-6. Results returned to client for display
+- **API**: Deployed to Google Cloud Run via `cloudbuild.yaml` (scale-to-zero capable)
+- **Client**: Deployed to Vercel as static SPA
+- **Database**: Can be hosted on Neon PostgreSQL or any PostgreSQL instance
+- **Local Development**: Full stack可 run via `docker compose up`
 
-## Deployment Topology
+## Security Considerations
 
-### Local Development
-- Docker Compose orchestrates:
-  - PostgreSQL database (host port 5432)
-  - Rails API (port 3001)
-  - React client served via nginx (port 5173)
-
-### Production
-- **API**: Deployed to Google Cloud Run via `cloudbuild.yaml`
-  - Containerized Docker image
-  - Scale-to-zero capability
-  - Environment variables configured via Cloud Build
-- **Client**: Deployed to Vercel (configuration in frontend repo)
-- **Database**: External PostgreSQL (Neon or self-hosted)
-
-## Key Characteristics
-
-- **Stateless API**: All session state managed via JWT tokens
-- **RESTful API**: Standard CRUD operations with proper HTTP verbs
-- **CORS Enabled**: Configured for frontend-backend communication
-- **Modular Services**: Business logic extracted to service objects
-- **Background Job Ready**: ActiveJob base class implemented
-- **File Storage**: Active Storage for recipe image attachments
+- JWT-based authentication with HTTP-only cookie storage recommended
+- JTI revocation strategy prevents token replay attacks
+- CORS policies restrict API access to authorized origins
+- Environment-based configuration for secrets (API keys, database URLs)

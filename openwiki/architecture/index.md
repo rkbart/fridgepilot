@@ -1,3 +1,3 @@
 # Files
 
-- [Architecture Overview](overview.md) - System overview based on README architecture diagram showing client, API, database, and AI provider interactions.
+- [FridgePilot Architecture](overview.md) - High-level system architecture showing the interaction between client, API, database, and optional AI provider.

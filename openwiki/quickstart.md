@@ -1,35 +1,46 @@
 ---
-type: Documentation Homepage
-title: FridgePilot Orchestration Wiki
-description: Entry point for the FridgePilot orchestration repository documentation. Provides links to architecture, deployment, and development workflows.
+type: Documentation Hub
+title: FridgePilot Documentation
+description: Entry point for the FridgePilot repository wiki. Provides high-level overview and navigation to all major components.
 tags: [quickstart, navigation]
 ---
-# FridgePilot Orchestration Wiki
+# FridgePilot Documentation
 
-This wiki documents the FridgePilot orchestration repository, which coordinates the frontend and backend applications, deployment configurations, and shared infrastructure.
+Welcome to the FridgePilot documentation. This wiki covers the parent/orchestration repository that ties together the FridgePilot API and client applications.
 
 ## Overview
 
-FridgePilot is a smart fridge & kitchen companion consisting of two main applications:
-- **API** ([fridgepilot-api](https://github.com/rkbart/fridgepilot-api)): Ruby on Rails 8 JSON API
-- **Client** ([fridgepilot-client](https://github.com/rkbart/fridgepilot-client)): React 19 TypeScript SPA
+FridgePilot is a smart fridge & kitchen companion that helps you track what's in your pantry, plan recipes from ingredients you already have, and build grocery lists — with an optional AI assistant that suggests recipes and generates shopping lists.
 
-This repository contains:
-- Docker Compose for local full-stack orchestration
-- Cloud Build configuration for API deployment to Google Cloud Run
-- Shared documentation and agent guidelines
+This repository contains the shared infrastructure, deployment configuration, and documentation. The application code lives in two dedicated repositories:
+- [fridgepilot-api](https://github.com/rkbart/fridgepilot-api): Ruby on Rails 8 JSON API
+- [fridgepilot-client](https://github.com/rkbart/fridgepilot-client): React 19 TypeScript SPA
 
 ## Navigation
 
-- [Architecture Overview](architecture/overview.md) - System architecture and component relationships
-<!-- openwiki: broken internal link [deployment.md] file "deployment.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Deployment](deployment.md) - Local and production deployment instructions
-<!-- openwiki: broken internal link [development.md] file "development.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Development Workflows](development.md) - Local setup and development procedures
+Select a topic below to explore detailed documentation:
 
-## Quick Links
+- [Architecture Overview](./architecture/overview.md)
+- [Repository Layout](./repository/layout.md)
+- [Services](./services/)
+  - [API Service](./services/api.md)
+  - [Client Service](./services/client.md)
+- [Deployment](./deployment/)
+  - [Local Docker Compose](./deployment/docker-compose.md)
+  - [Cloud Run Deployment](./deployment/cloud-run.md)
+- [Development Workflow](./development/local.md)
+- [Features](./features/)
+  - [Pantry](./features/pantry.md)
+  - [Recipes](./features/recipes.md)
+  - [Grocery Lists](./features/grocery-lists.md)
+  - [AI Assistant](./features/ai-assistant.md)
 
-- API Repository: https://github.com/rkbart/fridgepilot-api
-- Client Repository: https://github.com/rkbart/fridgepilot-client
-- Docker Compose: `docker-compose.yml`
-- Cloud Build: `cloudbuild.yaml`
+## Getting Started
+
+For local development, see the [Development Workflow](./development/local.md) guide.
+
+For deployment information, see the [Deployment](./deployment/) section.
+
+## Backlog
+
+- None currently tracked.
