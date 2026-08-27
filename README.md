@@ -38,7 +38,7 @@ This repo is the **parent / orchestration** repository. It contains the shared i
 
 - **API** — Ruby on Rails 8 (API-only), Devise + `devise-jwt` (JTI revocation strategy), PostgreSQL.
 - **Client** — React + TypeScript SPA built with Vite, React Router for navigation.
-- **Deployment** — API on Google Cloud Run (see `cloudbuild.yaml`), client on Vercel, database on Neon or any PostgreSQL.
+- **Deployment** — API on Google Cloud Run (see `cloudbuild.yaml` in the API repo), client on Vercel, database on Neon or any PostgreSQL.
 
 ## Quickstart with Docker
 
@@ -77,15 +77,19 @@ npm run dev
 
 ## Deployment
 
-- **API** — `cloudbuild.yaml` builds the backend image and deploys to Cloud Run (region `us-central1`, scale-to-zero). Configure via Cloud Build triggers.
+- **API** — `cloudbuild.yaml` in the [API repo](https://github.com/rkbart/fridgepilot-api) builds the Docker image, runs `db:migrate`, and deploys to Cloud Run (`us-central1`, scale-to-zero). A GitHub Actions workflow (`.github/workflows/deploy.yml`) triggers Cloud Build on pushes to `main`. `DATABASE_URL` is sourced from Google Cloud Secret Manager.
 - **Client** — `vercel.json` in the client repo configures SPA rewrites and the build output.
+
+### Required setup
+
+1. **Google Cloud Secret Manager** — create a secret named `DATABASE_URL` with your production database connection string
+2. **GitHub Secrets** — add `GCP_PROJECT_ID` and `GCP_SA_KEY` (service account JSON with Cloud Build + Cloud Run permissions) to the API repo
 
 ## Repository layout
 
 ```
 fridgepilot/
 ├── docker-compose.yml   # Local full-stack orchestration
-├── cloudbuild.yaml      # Cloud Run deployment for the API
 ├── CLAUDE.md            # Agent behavioral guidelines (used by coding assistants)
 └── README.md
 ```
