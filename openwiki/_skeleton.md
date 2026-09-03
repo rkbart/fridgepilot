@@ -189,7 +189,7 @@ This file outlines the planned structure of the wiki. Each entry describes what 
 - Volumes and network configuration
 
 #### Cloud Run (API)
-- cloudbuild.yaml for building and deploying the backend to Google Cloud Run
+- cloudbuild.yaml (in the API repository) for building and deploying the backend to Google Cloud Run
 - Build steps, deployment configuration
 - Environment variables and scaling
 

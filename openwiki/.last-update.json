@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-25T08:51:54.999Z",
+  "updatedAt": "2026-09-03T12:50:42.950Z",
   "command": "update",
-  "gitHead": "7c6fc1fe68153007cce136d7bc0a427e668f996b",
+  "gitHead": "6f2d3729f626563e84bed7c5854df8f1b016cd2d",
   "model": "nvidia/nemotron-3-super-120b-a12b",
   "status": "complete",
   "language": "en"

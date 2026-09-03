@@ -19,7 +19,7 @@ The application code lives in two separate repositories:
 | File/Directory | Purpose |
 |----------------|---------|
 | `docker-compose.yml` | Local full-stack orchestration (Postgres + API + client behind nginx) |
-| `cloudbuild.yaml` | Cloud Build configuration for deploying the API to Google Cloud Run |
+| `cloudbuild.yaml` | Cloud Build configuration for deploying the API to Google Cloud Run (located in the API repository) |
 | `README.md` | This file - overview of the project, features, architecture, and setup instructions |
 | `AGENTS.md` | Agent behavioral guidelines (used by coding assistants) |
 | `CLAUDE.md` | Agent behavioral guidelines (used by coding assistants) |
