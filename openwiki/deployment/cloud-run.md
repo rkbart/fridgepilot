@@ -8,7 +8,7 @@ tags: [deployment, cloud-run, gcp, api]
 
 ## Overview
 
-The FridgePilot API is deployed to Google Cloud Run using Cloud Build. The `cloudbuild.yaml` file in this repository defines the build and deployment process.
+The FridgePilot API is deployed to Google Cloud Run using Cloud Build. The `cloudbuild.yaml` file that defines the build and deployment process is located in the API repository (fridgepilot-api).
 
 This setup provides:
 - Containerized deployment of the Ruby on Rails API
@@ -18,23 +18,22 @@ This setup provides:
 
 ## Deployment Process
 
-The `cloudbuild.yaml` defines the following steps:
+The `cloudbuild.yaml` in the API repository defines the build and deployment steps. While the exact steps may vary, they typically include:
 
 ### 1. Build the Docker Image
 ```yaml
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/fridgepilot-backend:$COMMIT_SHA', './backend']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/fridgepilot-backend:$COMMIT_SHA', '.']
 ```
-- Builds a Docker image from the `./backend` directory
+- Builds a Docker image from the root of the API repository (where the Dockerfile resides)
 - Tags the image with the project ID, service name, and commit SHA
-- Assumes the API code is located in a `backend/` directory relative to the cloudbuild.yaml
 
 ### 2. Push the Image to Container Registry
 ```yaml
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/fridgepilot-backend:$COMMIT_SHA']
 ```
-- Pushes the built image to Google Container Registry (GCR)
+- Pushes the built image to Google Container Registry (GCR) or Artifact Registry
 - Uses the same tag as the build step
 
 ### 3. Deploy to Cloud Run
@@ -86,16 +85,14 @@ For the deployment to work, the following must be set up in Google Cloud:
 2. **Cloud Run API** enabled
 3. **Container Registry API** enabled (or Artifact Registry API)
 4. A Google Cloud project with billing enabled
-5. The `backend/` directory containing the API source code with a proper Dockerfile
+5. The API repository (fridgepilot-api) containing the source code with a proper Dockerfile in its root
 
 ## Backend Repository Requirements
 
-The `./backend` directory (expected to contain the fridgepilot-api code) must include:
-- A `Dockerfile` that builds a runnable Rails API image
+The fridgepilot-api repository (https://github.com/rkbart/fridgepilot-api) must include:
+- A `Dockerfile` that builds a runnable Rails API image in its root
 - The Rails application code
 - Proper configuration for production (database connection, secrets, etc.)
-
-Note: The actual fridgepilot-api repository is maintained separately at https://github.com/rkbart/fridgepilot-api.
 
 ## Database Connection
 
@@ -139,11 +136,7 @@ You can find the exact URL in the Cloud Run console or in the output of the `gcl
 
 ## Related Documentation
 
-<!-- openwiki: broken internal link [./architecture/overview.md] file "./architecture/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Architecture Overview](./architecture/overview.md) - System architecture context
-<!-- openwiki: broken internal link [./services/api.md] file "./services/api.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [API Service](./services/api.md) - Backend service details
-<!-- openwiki: broken internal link [./deployment/docker-compose.md] file "./deployment/docker-compose.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Deployment - Local Docker Compose](./deployment/docker-compose.md) - Local development setup
-<!-- openwiki: broken internal link [./services/client.md] file "./services/client.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Client Service](./services/client.md) - Frontend service details (deployed to Vercel separately)
+- [Architecture Overview](../architecture/overview.md) - System architecture context
+- [API Service](../services/api.md) - Backend service details
+- [Deployment - Local Docker Compose](./docker-compose.md) - Local development setup
+- [Client Service](../services/client.md) - Frontend service details (deployed to Vercel separately)
