@@ -19,7 +19,6 @@ The application code lives in two separate repositories:
 | File/Directory | Purpose |
 |----------------|---------|
 | `docker-compose.yml` | Local full-stack orchestration (Postgres + API + client behind nginx) |
-| `cloudbuild.yaml` | Cloud Build configuration for deploying the API to Google Cloud Run |
 | `README.md` | This file - overview of the project, features, architecture, and setup instructions |
 | `AGENTS.md` | Agent behavioral guidelines (used by coding assistants) |
 | `CLAUDE.md` | Agent behavioral guidelines (used by coding assistants) |
@@ -79,10 +78,8 @@ Directory for storing conversation histories if the project uses AI-assisted dev
 
 ## Related Documentation
 
-<!-- openwiki: broken internal link [./architecture/overview.md] file "./architecture/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Architecture Overview](./architecture/overview.md) - System architecture context
-- [Services](./services/) - Details on the API and client services
-- [Deployment](./deployment/) - Deployment options and instructions
-<!-- openwiki: broken internal link [./development/local.md] file "./development/local.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Development Workflow](./development/local.md) - Local development setup
-- [Features](./features/) - Detailed feature documentation
+- [Architecture Overview](../architecture/overview.md) - System architecture context
+- [Services](../services/) - Details on the API and client services
+- [Deployment](../deployment/) - Deployment options and instructions
+- [Development Workflow](../development/local.md) - Local development setup
+- [Features](../features/) - Detailed feature documentation

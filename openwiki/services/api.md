@@ -25,7 +25,7 @@ The FridgePilot API is a Ruby on Rails 8 application running in API-only mode th
 - **Authentication**: Devise + `devise-jwt` with JTI (JWT ID) revocation strategy
 - **Database**: PostgreSQL with ActiveRecord ORM
 - **API Format**: RESTful JSON endpoints
-- **Deployment**: Google Cloud Run via `cloudbuild.yaml`
+- **Deployment**: Google Cloud Run via `cloudbuild.yaml` in the API repository
 
 ## Key Features
 
@@ -149,14 +149,10 @@ The API is deployed to Google Cloud Run using the configuration in `cloudbuild.y
 
 ## Local Development
 
-<!-- openwiki: broken internal link [./development/local.md] file "./development/local.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-See the [Development Workflow](./development/local.md) for instructions on running the API locally.
+See the [Development Workflow](../development/local.md) for instructions on running the API locally.
 
 ## Related Documentation
 
-<!-- openwiki: broken internal link [./architecture/overview.md] file "./architecture/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Architecture Overview](./architecture/overview.md) - System architecture context
-<!-- openwiki: broken internal link [./deployment/cloud-run.md] file "./deployment/cloud-run.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Deployment - Cloud Run](./deployment/cloud-run.md) - Deployment specifics
-<!-- openwiki: broken internal link [./services/client.md] file "./services/client.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Client Service](./services/client.md) - Frontend counterpart
+- [Architecture Overview](../architecture/overview.md) - System architecture context
+- [Deployment - Cloud Run](../deployment/cloud-run.md) - Deployment specifics
+- [Client Service](../services/client.md) - Frontend counterpart
