@@ -8,7 +8,7 @@ tags: [deployment, cloud-run, gcp, api]
 
 ## Overview
 
-The FridgePilot API is deployed to Google Cloud Run using Cloud Build. The `cloudbuild.yaml` file in this repository defines the build and deployment process.
+The FridgePilot API is deployed to Google Cloud Run using Cloud Build. The `cloudbuild.yaml` file in the API repository (fridgepilot-api) defines the build and deployment process.
 
 This setup provides:
 - Containerized deployment of the Ruby on Rails API
@@ -18,7 +18,7 @@ This setup provides:
 
 ## Deployment Process
 
-The `cloudbuild.yaml` defines the following steps:
+The `cloudbuild.yaml` in the API repository defines the following steps:
 
 ### 1. Build the Docker Image
 ```yaml
@@ -27,7 +27,7 @@ The `cloudbuild.yaml` defines the following steps:
 ```
 - Builds a Docker image from the `./backend` directory
 - Tags the image with the project ID, service name, and commit SHA
-- Assumes the API code is located in a `backend/` directory relative to the cloudbuild.yaml
+- Assumes the API code is located in a `backend/` directory relative to the cloudbuild.yaml (in the API repository)
 
 ### 2. Push the Image to Container Registry
 ```yaml
