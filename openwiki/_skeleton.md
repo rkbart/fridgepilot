@@ -189,7 +189,7 @@ This file outlines the planned structure of the wiki. Each entry describes what 
 - Volumes and network configuration
 
 #### Cloud Run (API)
-- cloudbuild.yaml for building and deploying the backend to Google Cloud Run
+- Note: The cloudbuild.yaml for the API is located in the API repository (fridgepilot-api). See the API repository's documentation for build and deployment details.
 - Build steps, deployment configuration
 - Environment variables and scaling
 

@@ -10,17 +10,15 @@ tags: [architecture, system-design]
 
 FridgePilot follows a classic three-tier architecture with a single-page application (SPA) frontend, a JSON API backend, and a PostgreSQL database, with optional integration to an AI provider for enhanced features.
 
-<!-- openwiki: mermaid parse failed and this diagram was converted to a text fence so it does not break rendering. Fix the diagram source and restore the mermaid fence. Parser error: Parse error on line 2: ...graph Client[Client (SPA)] direc Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS' -->
+<!-- openwiki: mermaid parse failed and this diagram was converted to a text fence so it does not break rendering. Fix the diagram source and restore the mermaid fence. Parser error: Parse error on line 2: ...graph Client[Client (SPA)] Vite[ Expecting 'SQE', 'DOUBLECIRCLEEND', 'PE', '-)', 'STADIUMEND', 'SUBROUTINEEND', 'PIPE', 'CYLINDEREND', 'DIAMOND_STOP', 'TAGEND', 'TRAPEND', 'INVTRAPEND', 'UNICODE_TEXT', 'TEXT', 'TAGSTART', got 'PS' -->
 ```text
 flowchart TB
     subgraph Client[Client (SPA)]
-        direction TB
         Vite[Vite/React 19] --> Router[React Router]
         Router --> UI[User Interface]
     end
     
     subgraph API[API (Rails)]
-        direction TB
         Rails[Ruby on Rails 8 API-only] --> Devise[Devise + devise-jwt]
         Devise --> JTI[JTI Revocation Strategy]
         JTI --> Controllers[API Controllers]
@@ -88,7 +86,7 @@ flowchart TB
 
 ## Deployment Characteristics
 
-- **API**: Deployed to Google Cloud Run via `cloudbuild.yaml` (scale-to-zero capable)
+- **API**: Deployed to Google Cloud Run via `cloudbuild.yaml` in the API repository (scale-to-zero capable)
 - **Client**: Deployed to Vercel as static SPA
 - **Database**: Can be hosted on Neon PostgreSQL or any PostgreSQL instance
 - **Local Development**: Full stack可 run via `docker compose up`
