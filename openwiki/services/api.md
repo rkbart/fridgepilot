@@ -25,7 +25,7 @@ The FridgePilot API is a Ruby on Rails 8 application running in API-only mode th
 - **Authentication**: Devise + `devise-jwt` with JTI (JWT ID) revocation strategy
 - **Database**: PostgreSQL with ActiveRecord ORM
 - **API Format**: RESTful JSON endpoints
-- **Deployment**: Google Cloud Run via `cloudbuild.yaml`
+- **Deployment**: Google Cloud Run via `cloudbuild.yaml` in the [fridgepilot-api repository](https://github.com/rkbart/fridgepilot-api)
 
 ## Key Features
 
