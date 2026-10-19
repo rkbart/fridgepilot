@@ -134,15 +134,11 @@ The client is deployed as a static SPA to Vercel:
 
 ## Local Development
 
-<!-- openwiki: broken internal link [./development/local.md] file "./development/local.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-See the [Development Workflow](./development/local.md) for instructions on running the client locally.
+See the [Development Workflow](../development/local.md) for instructions on running the client locally.
 
 ## Related Documentation
 
-<!-- openwiki: broken internal link [./architecture/overview.md] file "./architecture/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Architecture Overview](./architecture/overview.md) - System architecture context
-<!-- openwiki: broken internal link [./deployment/docker-compose.md] file "./deployment/docker-compose.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Deployment - Local Docker Compose](./deployment/docker-compose.md) - Local full-stack development
-<!-- openwiki: broken internal link [./services/api.md] file "./services/api.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [API Service](./services/api.md) - Backend counterpart
+- [Architecture Overview](../architecture/overview.md) - System architecture context
+- [Deployment - Local Docker Compose](../deployment/docker-compose.md) - Local full-stack development
+- [API Service](./api.md) - Backend counterpart
 - [Features](./features/) - Detailed feature documentation

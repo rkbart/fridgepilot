@@ -14,6 +14,7 @@ okf_version: "0.1"
 
 - [architecture](architecture/)
 - [backend-api](backend-api/)
+- [configuration](configuration/)
 - [deployment](deployment/)
 - [development](development/)
 - [features](features/)

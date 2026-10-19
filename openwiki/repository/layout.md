@@ -19,7 +19,6 @@ The application code lives in two separate repositories:
 | File/Directory | Purpose |
 |----------------|---------|
 | `docker-compose.yml` | Local full-stack orchestration (Postgres + API + client behind nginx) |
-| `cloudbuild.yaml` | Cloud Build configuration for deploying the API to Google Cloud Run |
 | `README.md` | This file - overview of the project, features, architecture, and setup instructions |
 | `AGENTS.md` | Agent behavioral guidelines (used by coding assistants) |
 | `CLAUDE.md` | Agent behavioral guidelines (used by coding assistants) |
@@ -27,6 +26,11 @@ The application code lives in two separate repositories:
 | `/skills/` | Directory containing OpenWiki skills (used for documentation generation) |
 | `/openwiki/` | Generated OpenWiki documentation (this wiki) |
 | `/conversation_history/` | Directory for storing conversation histories (if applicable) |
+| `/DESIGN.md` | Product and design system context documentation |
+| `/PRODUCT.md` | Product requirements and feature specifications |
+| `/.impeccable/` | Configuration for impeccable agent tooling |
+| `/.codex/` | Codex agent configuration and hooks |
+| `/.github/` | GitHub workflows, agent configurations, and skills |
 
 ## Detailed File Descriptions
 
@@ -39,13 +43,7 @@ Defines a local development stack that includes:
 
 Used for local development and testing of the full stack.
 
-### cloudbuild.yaml
-Google Cloud Build configuration that:
-1. Builds a Docker image of the API from the `./backend` directory
-2. Pushes the image to Google Container Registry (or Artifact Registry)
-3. Deploys the image to Google Cloud Run
 
-Enables automated deployment of the API to a managed, scalable environment.
 
 ### README.md
 The main documentation file that provides:
@@ -79,10 +77,8 @@ Directory for storing conversation histories if the project uses AI-assisted dev
 
 ## Related Documentation
 
-<!-- openwiki: broken internal link [./architecture/overview.md] file "./architecture/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Architecture Overview](./architecture/overview.md) - System architecture context
+- [Architecture Overview](../architecture/overview.md) - System architecture context
 - [Services](./services/) - Details on the API and client services
 - [Deployment](./deployment/) - Deployment options and instructions
-<!-- openwiki: broken internal link [./development/local.md] file "./development/local.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Development Workflow](./development/local.md) - Local development setup
+- [Development Workflow](../development/local.md) - Local development setup
 - [Features](./features/) - Detailed feature documentation

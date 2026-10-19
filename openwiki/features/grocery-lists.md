@@ -150,15 +150,9 @@ The API provides RESTful endpoints for grocery list management:
 
 ## Related Documentation
 
-<!-- openwiki: broken internal link [./architecture/overview.md] file "./architecture/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Architecture Overview](./architecture/overview.md) - System context
-<!-- openwiki: broken internal link [./services/api.md] file "./services/api.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [API Service](./services/api.md) - Backend implementation
-<!-- openwiki: broken internal link [./services/client.md] file "./services/client.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Client Service](./services/client.md) - Frontend implementation
-<!-- openwiki: broken internal link [./features/pantry.md] file "./features/pantry.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Features - Pantry](./features/pantry.md) - Related feature (source of available items)
-<!-- openwiki: broken internal link [./features/recipes.md] file "./features/recipes.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Features - Recipes](./features/recipes.md) - Related feature (source of missing ingredients)
-<!-- openwiki: broken internal link [./features/ai-assistant.md] file "./features/ai-assistant.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Features - AI Assistant](./features/ai-assistant.md) - Related feature (can generate lists)
+- [Architecture Overview](../architecture/overview.md) - System architecture context
+- [API Service](../services/api.md) - Backend API details
+- [Client Service](../services/client.md) - Frontend client details
+- [Pantry Feature](./pantry.md) - Pantry management feature
+- [Recipes Feature](./recipes.md) - Recipe management feature
+- [AI Assistant Feature](./ai-assistant.md) - AI assistant feature

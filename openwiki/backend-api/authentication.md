@@ -128,7 +128,7 @@ Focused tests are in `/backend/spec/requests/`:
 ## Related Components
 
 - [Current User](/openwiki/backend-api/current-user.md) - Retrieve authenticated user data
-<!-- openwiki: broken internal link [/openwiki/configuration/index.md#devise-configuration] file "/openwiki/configuration/index.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+<!-- openwiki: broken internal link [/openwiki/configuration/index.md#devise-configuration] heading anchor "devise-configuration" does not exist in "/openwiki/configuration/index.md". Fix the href or restore the target, then delete this comment. -->
 - [Configuration](/openwiki/configuration/index.md#devise-configuration) - Devise and JWT initializer settings
 <!-- openwiki: broken internal link [/openwiki/backend-api/serializers.md#user_serializer] heading anchor "user_serializer" does not exist in "/openwiki/backend-api/serializers.md". Fix the href or restore the target, then delete this comment. -->
 - [Serializers](/openwiki/backend-api/serializers.md#user_serializer) - User serialization for API responses

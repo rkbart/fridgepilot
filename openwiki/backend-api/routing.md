@@ -103,7 +103,6 @@ The API uses URL versioning (`/api/v1/`) which allows:
 - Devise JWT handles token-based authentication
 - JWT tokens are renewed via `/users/token/renew` endpoint
 - Token revocation is handled via JTI (JWT ID) matching strategy
-<!-- openwiki: broken internal link [/openwiki/configuration/cors-configuration.md] file "/openwiki/configuration/cors-configuration.md" does not exist. Fix the href or restore the target, then delete this comment. -->
 - CORS configuration allows frontend origins (see [CORS Configuration](/openwiki/configuration/cors-configuration.md))
 
 ## Testing Routes

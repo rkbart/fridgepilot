@@ -115,5 +115,4 @@ end
 ## Related Components
 - [Models](/openwiki/backend-api/#models) - Each serializer corresponds to a model
 - [Controllers](/openwiki/backend-api/) - Serializers are used in controller actions to format responses
-<!-- openwiki: broken internal link [/openwiki/backend-api/api-contract.md] file "/openwiki/backend-api/api-contract.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [API Contract](/openwiki/backend-api/api-contract.md) - Serializers define the shape of API responses
+- [API Contract](../api-contract.md) - Serializers define the shape of API responses
