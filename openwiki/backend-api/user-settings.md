@@ -102,7 +102,7 @@ The frontend interacts with this API through the settings service:
 - [Authentication](/openwiki/backend-api/authentication.md) - Required for accessing settings
 - [Current User](/openwiki/backend-api/current-user.md) - Settings belong to the current user
 - [AI Integration](/openwiki/backend-api/ai-integration.md) - Uses the API key and endpoint from settings
-<!-- openwiki: broken internal link [/openwiki/backend-api/serializers.md#user_serializer] heading anchor "user_serializer" does not exist in "/openwiki/backend-api/serializers.md". Fix the href or restore the target, then delete this comment. -->
-- [Serializers](/openwiki/backend-api/serializers.md#user_serializer) - How user data is formatted (though settings endpoint builds custom JSON)
-<!-- openwiki: broken internal link [/openwiki/backend-api/routing.md#apiv1basecontroller] heading anchor "apiv1basecontroller" does not exist in "/openwiki/backend-api/routing.md". Fix the href or restore the target, then delete this comment. -->
-- [Backend API Base Controller](/openwiki/backend-api/routing.md#apiv1basecontroller) - Provides common functionality like authentication
+<!-- openwiki: broken internal link [../backend-api/serializers.md#user_serializer] heading anchor "user_serializer" does not exist in "../backend-api/serializers.md". Fix the href or restore the target, then delete this comment. -->
+- [Serializers](../backend-api/serializers.md#user_serializer) - How user data is formatted (though settings endpoint builds custom JSON)
+<!-- openwiki: broken internal link [../backend-api/routing.md#apiv1basecontroller] heading anchor "apiv1basecontroller" does not exist in "../backend-api/routing.md". Fix the href or restore the target, then delete this comment. -->
+- [Backend API Base Controller](../backend-api/routing.md#apiv1basecontroller) - Provides common functionality like authentication

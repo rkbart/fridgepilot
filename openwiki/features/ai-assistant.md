@@ -147,15 +147,9 @@ Users can configure the AI assistant in the settings:
 
 ## Related Documentation
 
-<!-- openwiki: broken internal link [./architecture/overview.md] file "./architecture/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Architecture Overview](./architecture/overview.md) - System context
-<!-- openwiki: broken internal link [./services/api.md] file "./services/api.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [API Service](./services/api.md) - Backend implementation (including AI endpoints)
-<!-- openwiki: broken internal link [./services/client.md] file "./services/client.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Client Service](./services/client.md) - Frontend implementation
-<!-- openwiki: broken internal link [./features/pantry.md] file "./features/pantry.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Features - Pantry](./features/pantry.md) - Source data for suggestions
-<!-- openwiki: broken internal link [./features/recipes.md] file "./features/recipes.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Features - Recipes](./features/recipes.md) - Source for list generation
-<!-- openwiki: broken internal link [./features/grocery-lists.md] file "./features/grocery-lists.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- [Features - Grocery Lists](./features/grocery-lists.md) - Destination for generated lists
+- [Architecture Overview](../architecture/overview.md) - System architecture context
+- [API Service](../services/api.md) - Backend API details
+- [Client Service](../services/client.md) - Frontend client details
+- [Pantry Feature](./pantry.md) - Pantry management feature
+- [Recipes Feature](./recipes.md) - Recipe management feature
+- [Grocery Lists Feature](./grocery-lists.md) - Grocery lists feature

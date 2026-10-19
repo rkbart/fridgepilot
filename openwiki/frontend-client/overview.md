@@ -13,8 +13,7 @@ The FridgePilot frontend is a single-page application (SPA) built with React 19,
 - **Build Tool**: Vite (for fast development and optimized builds)
 - **State Management**: React Context API (for global state)
 - **Routing**: React Router v6 (for client-side navigation)
-<!-- openwiki: broken internal link [/openwiki/frontend-client/entry-points-and-styles.md] file "/openwiki/frontend-client/entry-points-and-styles.md" does not exist. Fix the href or restore the target, then delete this comment. -->
-- **Styling**: Custom CSS with BEM-like conventions (see [Entry Points and Styles](/openwiki/frontend-client/entry-points-and-styles.md))
+- **Styling**: Custom CSS with BEM-like conventions (see [Entry Points and Styles](./entry-points-and-styles.md))
 - **API Communication**: Fetch API wrapped in a service layer (see [Services](/openwiki/frontend-client/services.md))
 
 ## Architecture
@@ -53,10 +52,8 @@ The frontend follows a component-based architecture with separation of concerns:
 
 ## Related Documentation
 - [Components](/openwiki/frontend-client/components.md) - Detailed documentation of reusable UI components
-<!-- openwiki: broken internal link [/openwiki/frontend-client/contexts.md] file "/openwiki/frontend-client/contexts.md" does not exist. Fix the href or restore the target, then delete this comment. -->
 - [Contexts](/openwiki/frontend-client/contexts.md) - State management providers and hooks
 - [Pages](/openwiki/frontend-client/pages.md) - Route-specific page components
 - [Services](/openwiki/frontend-client/services.md) - API service layer and endpoints
-<!-- openwiki: broken internal link [/openwiki/frontend-client/entry-points-and-styles.md] file "/openwiki/frontend-client/entry-points-and-styles.md" does not exist. Fix the href or restore the target, then delete this comment. -->
 - [Entry Points and Styles](/openwiki/frontend-client/entry-points-and-styles.md) - Application entry points and styling approach
 - [Backend API](/openwiki/backend-api/) - Documentation of the API endpoints consumed by the frontend

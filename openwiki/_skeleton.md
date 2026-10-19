@@ -10,7 +10,7 @@ This file outlines the planned structure of the wiki. Each entry describes what 
 
 ## Table of Contents
 
-1. [Quickstart](#quickstart)
+1. [Quickstart](./quickstart.md)
 2. [Architecture](#architecture)
 3. [Backend API](#backend-api)
    - [Authentication](#authentication)
@@ -26,33 +26,36 @@ This file outlines the planned structure of the wiki. Each entry describes what 
    - [Health Check](#health-check)
    - [Background Jobs](#background-jobs)
 4. [Frontend Client](#frontend-client)
-<!-- openwiki: broken internal link [#frontend-overview] heading anchor "frontend-overview" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Overview](#frontend-overview)
-<!-- openwiki: broken internal link [#frontend-components] heading anchor "frontend-components" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Components](#frontend-components)
-<!-- openwiki: broken internal link [#frontend-contexts] heading anchor "frontend-contexts" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Contexts](#frontend-contexts)
+<!-- openwiki: broken internal link [../frontend-client/overview.md] file "../frontend-client/overview.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Overview](../frontend-client/overview.md)
+<!-- openwiki: broken internal link [../frontend-client/components.md] file "../frontend-client/components.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Components](../frontend-client/components.md)
+
+<!-- openwiki: broken internal link [../frontend-client/contexts.md] file "../frontend-client/contexts.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Contexts](../frontend-client/contexts.md)
+
 <!-- openwiki: broken internal link [#frontend-pages] heading anchor "frontend-pages" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
    - [Pages](#frontend-pages)
-<!-- openwiki: broken internal link [#frontend-services] heading anchor "frontend-services" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Services](#frontend-services)
-<!-- openwiki: broken internal link [#frontend-entry-points-styles] heading anchor "frontend-entry-points-styles" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Entry Points and Styles](#frontend-entry-points-styles)
+<!-- openwiki: broken internal link [../frontend-client/services.md] file "../frontend-client/services.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Services](../frontend-client/services.md)
+<!-- openwiki: broken internal link [../frontend-client/entry-points-and-styles.md] file "../frontend-client/entry-points-and-styles.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Entry Points and Styles](../frontend-client/entry-points-and-styles.md)
 5. [Deployment](#deployment)
-   - [Docker Compose](#docker-compose)
-<!-- openwiki: broken internal link [#cloud-run] heading anchor "cloud-run" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Cloud Run (API)](#cloud-run)
-<!-- openwiki: broken internal link [#vercel] heading anchor "vercel" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Vercel (Client)](#vercel)
+<!-- openwiki: broken internal link [../deployment/docker-compose.md] file "../deployment/docker-compose.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Docker Compose](../deployment/docker-compose.md)
+<!-- openwiki: broken internal link [../deployment/cloud-run.md] file "../deployment/cloud-run.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Cloud Run (API)](../deployment/cloud-run.md)
+<!-- openwiki: broken internal link [../deployment/vercel.md] file "../deployment/vercel.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Vercel (Client)](../deployment/vercel.md)
 6. [Development Setup](#development-setup)
 7. [Testing](#testing)
 8. [Configuration](#configuration)
-<!-- openwiki: broken internal link [#environment-variables] heading anchor "environment-variables" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Environment Variables](#environment-variables)
-<!-- openwiki: broken internal link [#cors-configuration] heading anchor "cors-configuration" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [CORS Configuration](#cors-configuration)
-<!-- openwiki: broken internal link [#devise-configuration] heading anchor "devise-configuration" does not exist in /openwiki/_skeleton.md. Fix the href or restore the target, then delete this comment. -->
-   - [Devise Configuration](#devise-configuration)
+<!-- openwiki: broken internal link [../configuration/environment-variables.md] file "../configuration/environment-variables.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Environment Variables](../configuration/environment-variables.md)
+<!-- openwiki: broken internal link [../configuration/cors-configuration.md] file "../configuration/cors-configuration.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [CORS Configuration](../configuration/cors-configuration.md)
+<!-- openwiki: broken internal link [../configuration/devise-configuration.md] file "../configuration/devise-configuration.md" does not exist. Fix the href or restore the target, then delete this comment. -->
+   - [Devise Configuration](../configuration/devise-configuration.md)
 9. [Database Schema](#database-schema)
 10. [API Contract](#api-contract)
 11. [Active Storage](#active-storage)
@@ -189,7 +192,7 @@ This file outlines the planned structure of the wiki. Each entry describes what 
 - Volumes and network configuration
 
 #### Cloud Run (API)
-- cloudbuild.yaml for building and deploying the backend to Google Cloud Run
+
 - Build steps, deployment configuration
 - Environment variables and scaling
 

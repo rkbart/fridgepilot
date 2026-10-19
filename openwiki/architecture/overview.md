@@ -88,7 +88,7 @@ flowchart TB
 
 ## Deployment Characteristics
 
-- **API**: Deployed to Google Cloud Run via `cloudbuild.yaml` (scale-to-zero capable)
+- **API**: Deployed to Google Cloud Run (configuration managed in the API repository)
 - **Client**: Deployed to Vercel as static SPA
 - **Database**: Can be hosted on Neon PostgreSQL or any PostgreSQL instance
 - **Local Development**: Full stack可 run via `docker compose up`
